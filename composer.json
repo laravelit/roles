@@ -1,0 +1,21 @@
+{
+    "name": "laravelit/roles",
+    "description": "Handling roles and permissions in Laravel",
+    "keywords": ["roles", "permissions", "acl", "auth", "laravel", "illuminate"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adel Lamallam",
+            "email": "lamallam@afroware.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "~5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laravelit\\Roles\\": "src/"
+        }
+    }
+}
