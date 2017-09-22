@@ -67,6 +67,7 @@ Add the package to your application service providers in `config/app.php` file.
     Laravelit\Roles\RolesServiceProvider::class,
 
 ],
+
 ```
 
 ### Config File And Migrations

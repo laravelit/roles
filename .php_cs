@@ -1,7 +1,7 @@
 <?php
 
 $finder = Symfony\CS\Finder\DefaultFinder::create()
-    ->in(../__DIR__);
+    ->in(/__DIR__);
 
 $fixers = [
     'short_array_syntax',
