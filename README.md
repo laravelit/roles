@@ -35,14 +35,11 @@ Pull this package in through Composer (file `composer.json`).
 {
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.1.*",
-        "laravelit/roles": "2.1.*"
+        "laravel/framework": "^5.5",
+        "laravelit/roles": "^0"
     }
 }
 ```
-
-> If you are still using Laravel 5.0, you must pull in version `1.7.*`.
-
 Run this command inside your terminal.
 
     composer update
