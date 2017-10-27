@@ -17,6 +17,13 @@ interface RoleHasRelations
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function users();
+    
+    /**
+     * Role belongs to many spaces.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function spaces();
 
     /**
      * Attach permission to a role.

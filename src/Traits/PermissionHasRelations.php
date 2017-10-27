@@ -23,4 +23,13 @@ trait PermissionHasRelations
     {
         return $this->belongsToMany(config('auth.model'))->withTimestamps();
     }
+    /**
+     * Permission belongs to many spaces.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function spaces()
+    {
+    	return $this->belongsToMany(config('spaces.models.space'))->withTimestamps();
+    }
 }

@@ -17,4 +17,11 @@ interface PermissionHasRelations
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function users();
+    
+    /**
+     * Permission belongs to many spaces.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function spaces();
 }
