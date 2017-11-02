@@ -51,7 +51,7 @@ trait HasRoleAndPermission
      */
     public function is($role, $all = false)
     {
-        if ($this->isPretendEnabled()) {
+        if ($this->isPretendRoleEnabled()) {
             return $this->pretend('is');
         }
 
@@ -199,7 +199,7 @@ trait HasRoleAndPermission
      */
     public function can($permission, $all = false)
     {
-        if ($this->isPretendEnabled()) {
+        if ($this->isPretendRoleEnabled()) {
             return $this->pretend('can');
         }
 
@@ -264,8 +264,8 @@ trait HasRoleAndPermission
      */
     public function allowed($providedPermission, Model $entity, $owner = true, $ownerColumn = 'user_id')
     {
-        if ($this->isPretendEnabled()) {
-            return $this->pretend('allowed');
+        if ($this->isPretendRoleEnabled()) {
+            return $this->pretendRoles('allowed');
         }
 
         if ($owner === true && $entity->{$ownerColumn} == $this->id) {
@@ -336,7 +336,7 @@ trait HasRoleAndPermission
      *
      * @return bool
      */
-    private function isPretendEnabled()
+    private function isPretendRoleEnabled()
     {
         return (bool) config('roles.pretend.enabled');
     }
@@ -347,9 +347,9 @@ trait HasRoleAndPermission
      * @param string $option
      * @return bool
      */
-    private function pretend($option)
+    private function pretendRoles($option)
     {
-        return (bool) config('roles.pretend.options.' . $option);
+        return (bool) config('roles.pretend_roles.options.' . $option);
     }
 
     /**

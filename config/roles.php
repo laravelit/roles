@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'pretend' => [
+    'pretend_roles' => [
 
         'enabled' => false,
 
