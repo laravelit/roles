@@ -3,7 +3,7 @@
     "description": "Handling roles and permissions in Laravel",
     "keywords": ["roles", "permissions", "acl", "auth", "laravel", "illuminate"],
     "license": "MIT",
-    "version": "0.0.6,
+    "version": "0.0.6",
     "authors": [
         {
             "name": "Adel Lamallam",
